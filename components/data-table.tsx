@@ -183,8 +183,7 @@ export function DataTable({ data, columns, dataTypes }: DataTableProps) {
           </div>
         </CardHeader>
         <CardContent>
-          <ScrollArea className="w-full">
-            <div className="min-w-full">
+            <div className="w-full  overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="border-b bg-gray-50">
@@ -229,7 +228,6 @@ export function DataTable({ data, columns, dataTypes }: DataTableProps) {
                 </tbody>
               </table>
             </div>
-          </ScrollArea>
 
           {/* Pagination */}
           {totalPages > 1 && (
