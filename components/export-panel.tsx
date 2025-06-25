@@ -16,7 +16,7 @@ import {
   Info,
   Package
 } from 'lucide-react';
-import { toast } from 'sonner';
+import { toast, Toaster } from 'sonner';
 
 interface ExportPanelProps {
   dataState: {
@@ -198,7 +198,7 @@ export function ExportPanel({ dataState }: ExportPanelProps) {
 
   const downloadAllCharts = () => {
     // This would implement chart download functionality
-    toast.success('Chart download functionality would be implemented here');
+    toast.info('Chart download functionality if coming soon!');
   };
 
   const downloadEverything = () => {
@@ -414,6 +414,7 @@ export function ExportPanel({ dataState }: ExportPanelProps) {
           </div>
         </CardContent>
       </Card>
+      <Toaster/>
     </div>
   );
 }
