@@ -93,7 +93,7 @@ export default function Home() {
             median: numValues.sort((a, b) => a - b)[Math.floor(numValues.length / 2)],
             min: Math.min(...numValues),
             max: Math.max(...numValues),
-            std: Math.sqrt(numValues.reduce((sq, n) => sq + Math.pow(n - stats[column].mean, 2), 0) / numValues.length)
+            std: Math.sqrt(numValues.reduce((sq, n) => sq + Math.pow(n - (numValues.reduce((a, b) => a + b, 0) / numValues.length), 2), 0) / numValues.length)
           };
         }
       } else if (dataTypes[column] === 'categorical') {
