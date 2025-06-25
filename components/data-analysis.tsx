@@ -155,7 +155,7 @@ export function DataAnalysis({ dataState }: DataAnalysisProps) {
         <Card>
           <CardHeader>
             <CardTitle>Data Quality Overview</CardTitle>
-            <CardDescription>Missing values analysis by column</CardDescription>
+            <CardDescription>Data completeness by column. The higher the percentage, the more complete the data is.</CardDescription>
           </CardHeader>
           <CardContent>
             <ScrollArea className="h-64">
@@ -168,11 +168,11 @@ export function DataAnalysis({ dataState }: DataAnalysisProps) {
                         <span className="text-sm font-medium truncate max-w-32">{item.column}</span>
                       </div>
                       <span className={`text-sm font-medium ${getDataQualityColor(item.nullPercentage)}`}>
-                        {item.nullPercentage.toFixed(1)}%
+                        {(100 - item.nullPercentage).toFixed(1)}%
                       </span>
                     </div>
                     <Progress 
-                      value={item.nullPercentage} 
+                      value={100 - item.nullPercentage} 
                       className="h-2" 
                     />
                   </div>
