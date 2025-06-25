@@ -25,13 +25,13 @@ import {
   ResponsiveContainer 
 } from 'recharts';
 import { BarChart3, LineChart as LineIcon, PieChart as PieIcon, ChartScatter as ScatterIcon, TrendingUp, Hash, Type, Download, Settings } from 'lucide-react';
-import { toast } from 'sonner';
+import { toast, Toaster } from 'sonner';
 
 interface DataVisualizationProps {
   dataState: {
     data: any[];
     columns: string[];
-    fileName: string;
+    fileName: string
     dataTypes: Record<string, string>;
     statistics: Record<string, any>;
   };
@@ -208,7 +208,7 @@ export function DataVisualization({ dataState }: DataVisualizationProps) {
 
   const downloadChart = () => {
     // This would implement chart download functionality
-    toast.success('Chart download functionality would be implemented here');
+    toast.info('Chart download functionality is coming soon!');
   };
 
   return (
@@ -503,6 +503,7 @@ export function DataVisualization({ dataState }: DataVisualizationProps) {
           </CardContent>
         </Card>
       )}
+      <Toaster/>
     </div>
   );
 }
