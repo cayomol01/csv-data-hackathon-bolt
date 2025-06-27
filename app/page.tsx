@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useCallback, useRef } from 'react';
 import Papa from 'papaparse';
 import { Upload, FileText, BarChart3, Download, Undo2, Redo2, RefreshCw, TrendingUp, Info, Settings, Eye } from 'lucide-react';
