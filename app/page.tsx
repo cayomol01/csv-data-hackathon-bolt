@@ -2,14 +2,11 @@
 
 import React, { useState, useCallback, useRef } from 'react';
 import Papa from 'papaparse';
-import { Upload, FileText, BarChart3, Download, Undo2, Redo2, RefreshCw, Trash2, TrendingUp, Info, Settings, Eye } from 'lucide-react';
+import { Upload, FileText, BarChart3, Download, Undo2, Redo2, RefreshCw, TrendingUp, Info, Settings, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
-import { ScrollArea } from '@/components/ui/scroll-area';
 import { Progress } from '@/components/ui/progress';
 import { toast } from 'sonner';
 import { DataTable } from '@/components/data-table';

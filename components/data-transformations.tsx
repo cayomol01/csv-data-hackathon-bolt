@@ -351,8 +351,8 @@ export function DataTransformations({ dataState, onDataUpdate }: DataTransformat
                   <Alert>
                     <Info className="h-4 w-4" />
                     <AlertDescription>
-                      Column "{selectedColumn}" has {statistics[selectedColumn].nullCount} missing values 
-                      ({statistics[selectedColumn].nullPercentage.toFixed(1)}% of total)
+                      {`Column "${selectedColumn}" has ${statistics[selectedColumn].nullCount} missing values 
+                      (${statistics[selectedColumn].nullPercentage.toFixed(1)}% of total)`}
                     </AlertDescription>
                   </Alert>
                 )}
@@ -521,8 +521,8 @@ export function DataTransformations({ dataState, onDataUpdate }: DataTransformat
                   <Alert>
                     <Info className="h-4 w-4" />
                     <AlertDescription>
-                      This will create {statistics[encodingColumn].unique} new binary columns.
-                      Most common value: "{statistics[encodingColumn].mode}"
+                      {`This will create ${statistics[encodingColumn].unique} new binary columns.
+                      Most common value: "${statistics[encodingColumn].mode}"`}
                     </AlertDescription>
                   </Alert>
                 )}
@@ -580,7 +580,7 @@ export function DataTransformations({ dataState, onDataUpdate }: DataTransformat
                 <Alert>
                   <Info className="h-4 w-4" />
                   <AlertDescription>
-                    This will keep only rows where "{filterColumn}" contains "{filterValue}"
+                    {`This will keep only rows where "${filterColumn}" contains "${filterValue}"`}
                   </AlertDescription>
                 </Alert>
               )}
