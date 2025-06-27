@@ -6,11 +6,6 @@ const nextConfig = {
   },
   images: { unoptimized: true },
   swcMinify: false,
-  compiler: {
-    reactRemoveProperties: true,
-    removeConsole: true,
-    styledComponents: true,
-  },
 };
 
 module.exports = nextConfig;
