@@ -123,7 +123,7 @@ export function DataVisualization({ dataState }: DataVisualizationProps) {
           }, {} as Record<string, number>);
 
           return Object.entries(counts)
-            .sort(([,a], [,b]) => b - a)
+            .sort(([,a], [,b]) => (b as number) - (a as number))
             .slice(0, 8) // Limit to top 8 categories
             .map(([key, count]) => ({
               name: key,
