@@ -485,17 +485,17 @@ export function DataVisualization({ dataState }: DataVisualizationProps) {
                 <p className="text-2xl font-bold text-blue-600">{chartData.length}</p>
                 <p className="text-sm text-gray-600">Data Points</p>
               </div>
-              {selectedChart !== 'pie' && (
+              {(selectedChart === 'bar' || selectedChart === 'line') && (
                 <>
                   <div className="text-center">
                     <p className="text-2xl font-bold text-green-600">
-                      {Math.max(...chartData.map(d => d.value || 0)).toFixed(2)}
+                      {Math.max(...chartData.map(d => (d as any).value || 0)).toFixed(2)}
                     </p>
                     <p className="text-sm text-gray-600">Maximum Value</p>
                   </div>
                   <div className="text-center">
                     <p className="text-2xl font-bold text-orange-600">
-                      {(chartData.reduce((sum, d) => sum + (d.value || 0), 0) / chartData.length).toFixed(2)}
+                      {(chartData.reduce((sum, d) => sum + ((d as any).value || 0), 0) / chartData.length).toFixed(2)}
                     </p>
                     <p className="text-sm text-gray-600">Average Value</p>
                   </div>
