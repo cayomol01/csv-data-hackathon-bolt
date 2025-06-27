@@ -97,7 +97,7 @@ export default function Home() {
           };
         }
       } else if (dataTypes[column] === 'categorical') {
-        const uniqueValues = [...new Set(values)];
+        const uniqueValues = Array.from(new Set(values));
         const valueCounts = uniqueValues.reduce((acc, val) => {
           acc[val] = values.filter(v => v === val).length;
           return acc;
