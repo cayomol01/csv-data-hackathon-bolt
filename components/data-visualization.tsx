@@ -79,7 +79,7 @@ export function DataVisualization({ dataState }: DataVisualizationProps) {
               return acc;
             }, {} as Record<string, number[]>);
 
-            return Object.entries(grouped).map(([key, values]: [string, number[]]) => ({
+            return (Object.entries(grouped) as Array<[string, number[]]>).map(([key, values]) => ({
               name: key,
               value: aggregation === 'count' ? values.length :
                      aggregation === 'sum' ? values.reduce((a, b) => a + b, 0) :
