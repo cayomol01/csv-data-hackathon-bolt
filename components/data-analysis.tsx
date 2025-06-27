@@ -289,7 +289,7 @@ export function DataAnalysis({ dataState }: DataAnalysisProps) {
                             <div key={value} className="flex items-center justify-between text-xs">
                               <span className="truncate max-w-24">{value}</span>
                               <Badge variant="outline" className="text-xs">
-                                {count} ({(((count as number) / stats.count) * 100).toFixed(1)}%)
+                                {count as number} ({(((count as number) / stats.count) * 100).toFixed(1)}%)
                               </Badge>
                             </div>
                           ))}
