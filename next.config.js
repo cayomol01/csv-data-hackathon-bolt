@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  eslint: {
-    ignoreDuringBuilds: false,
+  experimental: {
+    appDir: true,
   },
-  images: { unoptimized: true },
-  typescript: {
-    // Temporarily ignore type errors during build to prevent hanging
-    ignoreBuildErrors: false,
-  },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
