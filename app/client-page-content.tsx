@@ -14,6 +14,7 @@ import { DataVisualization } from '@/components/data-visualization';
 import { DataTransformations } from '@/components/data-transformations';
 import { DataAnalysis } from '@/components/data-analysis';
 import { ExportPanel } from '@/components/export-panel';
+import BoltBadge from '@/components/ui/bolt-badge';
 
 interface DataState {
   data: any[];
@@ -313,6 +314,7 @@ export default function ClientPageContent() {
             </Card>
           </div>
         </div>
+        <BoltBadge />
       </div>
     );
   }
@@ -425,6 +427,7 @@ export default function ClientPageContent() {
           </TabsContent>
         </Tabs>
       </div>
+      <BoltBadge />
     </div>
   );
 }
