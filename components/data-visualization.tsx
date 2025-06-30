@@ -401,7 +401,6 @@ export function DataVisualization({ dataState }: DataVisualizationProps) {
             {chartData.length > 0 ? (
               <div className="h-96">
                 <ResponsiveContainer width="100%" height="100%">
-                  <>
                     {selectedChart === 'bar' && (
                       <BarChart data={chartData}>
                         <CartesianGrid strokeDasharray="3 3" />
@@ -455,7 +454,6 @@ export function DataVisualization({ dataState }: DataVisualizationProps) {
                         <Scatter name="Data Points" data={chartData} fill="#3B82F6" />
                       </ScatterChart>
                     )}
-                  </>
                 </ResponsiveContainer>
               </div>
             ) : (
